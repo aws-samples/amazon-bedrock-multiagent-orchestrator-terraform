@@ -41,6 +41,8 @@ terraform.rc
 # Ignore local environment files
 .env
 .env.local
+.envrc
+.direnv/
 
 # Ignore test coverage reports
 coverage/
@@ -58,7 +60,48 @@ checkov-report.txt
 
 # Ignore output directories
 out/
+dist/
+build/
 
 # Ignore blog drafts and generated content
 blog*.md
 detailed-architecture.md
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.backup
+
+# Ignore node modules (if using JS/TS for Lambda functions)
+node_modules/
+npm-debug.log
+
+# Ignore Python virtual environments
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Ignore CDK output
+cdk.out/
+
+# Ignore Terraform plan files
+*tfplan*
+
+# Ignore any local credentials
+credentials.json
+*credentials*
+*secret*
+*key*
+!*template*key*
+!*example*key*
+
+# Ignore any local test data
+test-data/
+mock-data/
+
+# Ignore any local documentation drafts
+docs/drafts/
